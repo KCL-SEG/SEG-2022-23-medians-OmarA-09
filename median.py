@@ -1,5 +1,6 @@
 """Median calculator."""
 """ENTER YOUR SOLUTION HERE!"""
+from math import floor
 
 while True:
     try:
@@ -10,3 +11,11 @@ while True:
     else:
         break
 print(numbers)
+
+numbers.sort()
+if len(numbers) % 2 == 0:
+    first = numbers[int(len(numbers)/2-1)]
+    second = numbers[int(len(numbers)/2)]
+    print((first+second)/2)
+else:
+    print(numbers[floor(len(numbers)/2)])
